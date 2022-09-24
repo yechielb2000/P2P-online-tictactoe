@@ -1,4 +1,3 @@
-from typing import List
 import threading 
 import socket
 
@@ -76,7 +75,7 @@ class Game:
                 print("It's a tie!")
                 exit()                                     
 
-    def check_valid_move(self, move) -> List[List[str]]:
+    def check_valid_move(self, move) -> bool:
         return self.board[int(move[0])][int(move[1])] == " "
 
     def check_if_won(self) -> bool:
